@@ -9,11 +9,11 @@ WHERE (e.birth_date BETWEEN '1952-01-01' AND '1955-12-31')
 ORDER BY emp_no
 
 -- Use Dictinct with Orderby to remove duplicate rows
-SELECT DISTINCT ON (______) _____,
-______,
-______,
-______
+SELECT DISTINCT ON (emp_no) emp_no,
+first_name,
+last_name,
+title
 
-INTO nameyourtable
-FROM _______
-ORDER BY _____, _____ DESC;
+INTO unique_titles
+FROM retirement_titles
+ORDER BY emp_no, to_date DESC;
